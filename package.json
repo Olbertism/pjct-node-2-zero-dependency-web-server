@@ -1,6 +1,7 @@
 {
   "name": "pjct-node-2-zero-dependency-web-server",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "repository": "https://github.com/Olbertism/pjct-node-2-zero-dependency-web-server.git",
   "author": "Albert Pichler <albertpichler@gmx.net>",
