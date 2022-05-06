@@ -41,11 +41,9 @@ const server = http.createServer(function (request, response) {
   let pathname = `.${parsedUrl.pathname}`;
   let ext = path.parse(pathname).ext;
 
-  if (pathname === './' && ext === '') {
+  if ((pathname === './' && ext === '') || pathname === './index.html') {
     pathname = 'public/index.html';
     ext = '.html';
-  } else if (pathname === './index.html') {
-    pathname = 'public/index.html';
   } else if (!pathname.startsWith('./public')) {
     response.writeHead(403, { 'content-type': 'text/plain' });
     response.write('403 - Forbidden');
